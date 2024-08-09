@@ -1,30 +1,12 @@
-PS C:\Users\felip\Impacta\exercicio01> ls README.md
-Get-ChildItem: Cannot find path 'C:\Users\felip\Impacta\exercicio01\README.md' because it does not exist.
-PS C:\Users\felip\Impacta\exercicio01> git add README.md.
-fatal: pathspec 'README.md.' did not match any files
-PS C:\Users\felip\Impacta\exercicio01> git add README.md
-fatal: pathspec 'README.md' did not match any files
-PS C:\Users\felip\Impacta\exercicio01> git add "README.md"
-fatal: pathspec 'README.md' did not match any files
-PS C:\Users\felip\Impacta\exercicio01> 
-PS C:\Users\felip\Impacta\exercicio01> 
-PS C:\Users\felip\Impacta\exercicio01> git add README.md
-fatal: pathspec 'README.md' did not match any files
-PS C:\Users\felip\Impacta\exercicio01> 
-PS C:\Users\felip\Impacta\exercicio01> 
+# Foi criado um arquivo README.md com comando git >> README.md
+
 PS C:\Users\felip\Impacta\exercicio01> git >> README.md
 PS C:\Users\felip\Impacta\exercicio01> git add README.md
 PS C:\Users\felip\Impacta\exercicio01> git add README.md
 warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
-PS C:\Users\felip\Impacta\exercicio01> git status
-PS C:\Users\felip\Impacta\exercicio01> git add README.md
-warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
-PS C:\Users\felip\Impacta\exercicio01> git add README.md
-warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
-PS C:\Users\felip\Impacta\exercicio01> git add README.md
-PS C:\Users\felip\Impacta\exercicio01> git add README.md
-PS C:\Users\felip\Impacta\exercicio01> git add README.md
-warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+# Depois foi realizado comando git status para verificação de stag
+
 PS C:\Users\felip\Impacta\exercicio01> git status
 On branch main
 
@@ -34,11 +16,12 @@ Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
         new file:   README.md
 
+# Foi criado um arquivo.txt com comando echo 01 > arquivo.txt
 PS C:\Users\felip\Impacta\exercicio01> echo 01 > arquivo.txt
-PS C:\Users\felip\Impacta\exercicio01> git add example - arquivo.txt
-fatal: pathspec 'example' did not match any files
+
+# Adicionado o arquivo no staged com git add
+
 PS C:\Users\felip\Impacta\exercicio01> git add 01 - arquivo.txt     
-fatal: pathspec '01' did not match any files
 PS C:\Users\felip\Impacta\exercicio01> git add arquivo.txt     
 PS C:\Users\felip\Impacta\exercicio01> echo 02 > arquivo.txt
 PS C:\Users\felip\Impacta\exercicio01> git stats 
@@ -69,33 +52,13 @@ index 8a0f05e..9e22bcb 100644
 @@ -1 +1 @@
 -01
 +02
-PS C:\Users\felip\Impacta\exercicio01> git add 
-Nothing specified, nothing added.
-hint: Maybe you wanted to say 'git add .'?
-hint: Turn this message off by running
-hint: "git config advice.addEmptyPathspec false"
-PS C:\Users\felip\Impacta\exercicio01> pwd                                                        
 
-Path
-----
-C:\Users\felip\Impacta\exercicio01
-
-PS C:\Users\felip\Impacta\exercicio01> 
-PS C:\Users\felip\Impacta\exercicio01> git add \felip\Impacta\exercicio01                 
-fatal: Invalid path '/felip': No such file or directory
-PS C:\Users\felip\Impacta\exercicio01> git add \felip\Impacta
-fatal: Invalid path '/felip': No such file or directory
-PS C:\Users\felip\Impacta\exercicio01> git add \felip\Impacta\exercicio01\arquivo.txt
-fatal: Invalid path '/felip': No such file or directory
-PS C:\Users\felip\Impacta\exercicio01> git add \felip\Impacta\exercicio01\arquivo.txt .
-fatal: Invalid path '/felip': No such file or directory
-PS C:\Users\felip\Impacta\exercicio01> git add Impacta\exercicio01\arquivo.txt .       
-fatal: pathspec 'Impacta\exercicio01\arquivo.txt' did not match any files
-PS C:\Users\felip\Impacta\exercicio01> git add Impacta\exercicio01\arquivo.txt
-fatal: pathspec 'Impacta\exercicio01\arquivo.txt' did not match any files
 PS C:\Users\felip\Impacta\exercicio01> git add arquivo.txt
 PS C:\Users\felip\Impacta\exercicio01> git diff arquivo.txt
 PS C:\Users\felip\Impacta\exercicio01> echo 03 > arquivo.txt
+
+# Nessa fase, foi feito o comando diff para mostrar a modificação no arquivo.txt
+
 PS C:\Users\felip\Impacta\exercicio01> git diff arquivo.txt 
 diff --git a/arquivo.txt b/arquivo.txt
 index 9e22bcb..75016ea 100644
@@ -116,6 +79,7 @@ index 9e22bcb..75016ea 100644
 @@ -1 +1 @@
 -02
 +03
+
 PS C:\Users\felip\Impacta\exercicio01> git restore arquivo.txt
 PS C:\Users\felip\Impacta\exercicio01> git commit -m "file: arquivo.txt"
 [main (root-commit) 493aded] file: arquivo.txt
@@ -141,4 +105,3 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
         .gitignore
 
-        
