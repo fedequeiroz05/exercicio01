@@ -1,44 +1,144 @@
-usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
-           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
-           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
-           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
-           [--config-env=<name>=<envvar>] <command> [<args>]
+PS C:\Users\felip\Impacta\exercicio01> ls README.md
+Get-ChildItem: Cannot find path 'C:\Users\felip\Impacta\exercicio01\README.md' because it does not exist.
+PS C:\Users\felip\Impacta\exercicio01> git add README.md.
+fatal: pathspec 'README.md.' did not match any files
+PS C:\Users\felip\Impacta\exercicio01> git add README.md
+fatal: pathspec 'README.md' did not match any files
+PS C:\Users\felip\Impacta\exercicio01> git add "README.md"
+fatal: pathspec 'README.md' did not match any files
+PS C:\Users\felip\Impacta\exercicio01> 
+PS C:\Users\felip\Impacta\exercicio01> 
+PS C:\Users\felip\Impacta\exercicio01> git add README.md
+fatal: pathspec 'README.md' did not match any files
+PS C:\Users\felip\Impacta\exercicio01> 
+PS C:\Users\felip\Impacta\exercicio01> 
+PS C:\Users\felip\Impacta\exercicio01> git >> README.md
+PS C:\Users\felip\Impacta\exercicio01> git add README.md
+PS C:\Users\felip\Impacta\exercicio01> git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\felip\Impacta\exercicio01> git status
+PS C:\Users\felip\Impacta\exercicio01> git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\felip\Impacta\exercicio01> git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\felip\Impacta\exercicio01> git add README.md
+PS C:\Users\felip\Impacta\exercicio01> git add README.md
+PS C:\Users\felip\Impacta\exercicio01> git add README.md
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+PS C:\Users\felip\Impacta\exercicio01> git status
+On branch main
 
-These are common Git commands used in various situations:
+No commits yet
 
-start a working area (see also: git help tutorial)
-   clone     Clone a repository into a new directory
-   init      Create an empty Git repository or reinitialize an existing one
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
 
-work on the current change (see also: git help everyday)
-   add       Add file contents to the index
-   mv        Move or rename a file, a directory, or a symlink
-   restore   Restore working tree files
-   rm        Remove files from the working tree and from the index
+PS C:\Users\felip\Impacta\exercicio01> echo 01 > arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> git add example - arquivo.txt
+fatal: pathspec 'example' did not match any files
+PS C:\Users\felip\Impacta\exercicio01> git add 01 - arquivo.txt     
+fatal: pathspec '01' did not match any files
+PS C:\Users\felip\Impacta\exercicio01> git add arquivo.txt     
+PS C:\Users\felip\Impacta\exercicio01> echo 02 > arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> git stats 
+git: 'stats' is not a git command. See 'git --help'.
 
-examine the history and state (see also: git help revisions)
-   bisect    Use binary search to find the commit that introduced a bug
-   diff      Show changes between commits, commit and working tree, etc
-   grep      Print lines matching a pattern
-   log       Show commit logs
-   show      Show various types of objects
-   status    Show the working tree status
+The most similar command is
+        status
+PS C:\Users\felip\Impacta\exercicio01> git status
+On branch main
 
-grow, mark and tweak your common history
-   branch    List, create, or delete branches
-   commit    Record changes to the repository
-   merge     Join two or more development histories together
-   rebase    Reapply commits on top of another base tip
-   reset     Reset current HEAD to the specified state
-   switch    Switch branches
-   tag       Create, list, delete or verify a tag object signed with GPG
+No commits yet
 
-collaborate (see also: git help workflows)
-   fetch     Download objects and refs from another repository
-   pull      Fetch from and integrate with another repository or a local branch
-   push      Update remote refs along with associated objects
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   arquivo.txt
 
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   arquivo.txt
+
+PS C:\Users\felip\Impacta\exercicio01> git diff arquivo.txt
+diff --git a/arquivo.txt b/arquivo.txt
+index 8a0f05e..9e22bcb 100644
+--- a/arquivo.txt
++++ b/arquivo.txt
+@@ -1 +1 @@
+-01
++02
+PS C:\Users\felip\Impacta\exercicio01> git add 
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+PS C:\Users\felip\Impacta\exercicio01> pwd                                                        
+
+Path
+----
+C:\Users\felip\Impacta\exercicio01
+
+PS C:\Users\felip\Impacta\exercicio01> 
+PS C:\Users\felip\Impacta\exercicio01> git add \felip\Impacta\exercicio01                 
+fatal: Invalid path '/felip': No such file or directory
+PS C:\Users\felip\Impacta\exercicio01> git add \felip\Impacta
+fatal: Invalid path '/felip': No such file or directory
+PS C:\Users\felip\Impacta\exercicio01> git add \felip\Impacta\exercicio01\arquivo.txt
+fatal: Invalid path '/felip': No such file or directory
+PS C:\Users\felip\Impacta\exercicio01> git add \felip\Impacta\exercicio01\arquivo.txt .
+fatal: Invalid path '/felip': No such file or directory
+PS C:\Users\felip\Impacta\exercicio01> git add Impacta\exercicio01\arquivo.txt .       
+fatal: pathspec 'Impacta\exercicio01\arquivo.txt' did not match any files
+PS C:\Users\felip\Impacta\exercicio01> git add Impacta\exercicio01\arquivo.txt
+fatal: pathspec 'Impacta\exercicio01\arquivo.txt' did not match any files
+PS C:\Users\felip\Impacta\exercicio01> git add arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> git diff arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> echo 03 > arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> git diff arquivo.txt 
+diff --git a/arquivo.txt b/arquivo.txt
+index 9e22bcb..75016ea 100644
+--- a/arquivo.txt
++++ b/arquivo.txt
+@@ -1 +1 @@
+-02
++03
+
+PS C:\Users\felip\Impacta\exercicio01> git add arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> git diff arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> echo 03 > arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> git diff arquivo.txt
+diff --git a/arquivo.txt b/arquivo.txt
+index 9e22bcb..75016ea 100644
+--- a/arquivo.txt
++++ b/arquivo.txt
+@@ -1 +1 @@
+-02
++03
+PS C:\Users\felip\Impacta\exercicio01> git restore arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> git commit -m "file: arquivo.txt"
+[main (root-commit) 493aded] file: arquivo.txt
+ 2 files changed, 45 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> git log
+commit 493adedecfe93db364da9c19dce35d7bc9cd720e (HEAD -> main)
+Author: Fededaher <felipequeiroz05@gmail.com>
+Date:   Thu Aug 8 21:02:50 2024 -0300
+
+    file: arquivo.txt
+PS C:\Users\felip\Impacta\exercicio01> git add .gitignore 
+fatal: pathspec '.gitignore' did not match any files
+PS C:\Users\felip\Impacta\exercicio01> git >> .gitignore 
+PS C:\Users\felip\Impacta\exercicio01> echo 01 > novo.txt
+PS C:\Users\felip\Impacta\exercicio01> git status       
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+
+        
